@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Student Registration form</h2>
+
+<form action="{% url 'regeister' %}" method="post">
+    {% csrf_token %}
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname" value="" required><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname" value="" required><br><br>
+    <label for="qualification">Qualification:</label>
+      <select id="qualification" name="quali" required> 
+          <option value="BE">BE</option>
+          <option value="B.Tech">B.Tech</option>
+          <option value="ME">ME</option>
+          <option value="M.Tech">M.Tech</option>
+      </select>
+    <p>Please select your favorite language:</p>
+    <input type="checkbox" id="Django" name="language[]" value="Django" >
+    <label for="Django">Django</label><br>
+    <input type="checkbox" id="Python" name="language[]" value="Python">
+    <label for="Python">Python</label><br>
+    <input type="checkbox" id="HTML/CSS" name="language[]" value="HTML/CSS">
+    <label for="HTML/CSS">HTML/CSS</label>
+    <br>  
+    <label for="dob">D.O.B:</label>
+    <input type="date" id="dob" name="dob" value="" required><br>
+    <p>Please select your age:</p>
+    <input type="radio" id="age1" name="age" value="0-30">
+    <label for="age1">0 - 30</label><br>
+    <input type="radio" id="age2" name="age" value="31-60">
+    <label for="age2">31 - 60</label><br>  
+    <input type="radio" id="age3" name="age" value="61-100">
+    <label for="age3">61 - 100</label><br><br>
+    <br/>
+  <input type="submit">
+</form>
+<div>
+  <form action="{%url 'data'%}">
+    <h2>show all regeister Student details</h2>
+    <input type="submit" value="show data">
+  </form>
+</div>
+</body>
+</html> 

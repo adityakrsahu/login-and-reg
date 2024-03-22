@@ -1,0 +1,16 @@
+<html>
+<body>
+    <center>
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+
+            <h1>Login Form</h1><br>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" value="" required><br><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" value="" required><br><br>
+            <input type="submit">
+            </form>
+    </center>     
+</body>
+</html>

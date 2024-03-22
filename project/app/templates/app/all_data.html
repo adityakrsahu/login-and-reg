@@ -1,0 +1,23 @@
+<h1>All Student details are:</h1>
+
+<table border="2">
+    <tr bgcolor="lightpink">       
+        <th>ID</th>
+        <th>First_Name</th>
+        <th>Last_Name</th>
+        <th>Age</th>
+        <th>DOB</th>
+        <th>Language</th>
+    </tr>
+    {% for i in data %}
+    <tr style="text-align: center;">
+        <td bgcolor="lightblue">{{i.id}}</td>
+        <td>{{i.First_Name}}</td>
+        <td>{{i.Last_Name}}</td>
+        <td>{{i.Age}}</td>
+        <td>{{i.DOB}}</td>
+        <td>{{i.Language}}</td>
+    </tr>
+        
+    {% endfor %}
+</table>
